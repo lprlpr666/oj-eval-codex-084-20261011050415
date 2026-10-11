@@ -95,7 +95,7 @@ struct LinkedHashMap {
         if (nxt) nxt->timePre = pre;
         if (this->cur == curNode) this->cur = pre;
         Node* toDelete = curNode;
-        curNode = curNode->next;
+        curNode = curNode->next; // advance before deletion
         delete toDelete;
         // prev unchanged
       } else {
